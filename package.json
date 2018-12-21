@@ -40,9 +40,9 @@
   "homepage": "https://github.com/cheton/react-bootstrap-buttons",
   "keywords": [
     "react",
-    "react-component",
-    "button",
-    "buttons"
+    "bootstrap",
+    "buttons",
+    "component"    
   ],
   "peerDependencies": {
     "react": "^0.14.0 || >=15.0.0"
