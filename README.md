@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/react-bootstrap-buttons.png?downloads=true&stars=true)](https://nodei.co/npm/react-bootstrap-buttons/)
 
-React Buttons component.
+React Bootstrap buttons.
 
 Demo: https://cheton.github.io/react-bootstrap-buttons
 
