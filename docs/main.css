@@ -829,7 +829,7 @@ input[type="button"].react-bootstrap-buttons---btn-block---3KvdE {
 .react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn---29cLb:first-child {
   margin-left: 0;
 }
-.react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn---29cLb:not(:last-child):not(.react-bootstrap-buttons---dropdown-toggle---2v87e),
+.react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn---29cLb:not(:last-child),
 .react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn-group---3NxJk:not(:last-child) > .react-bootstrap-buttons---btn---29cLb {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -870,7 +870,7 @@ input[type="button"].react-bootstrap-buttons---btn-block---3KvdE {
   margin-top: -1px;
   margin-left: 0;
 }
-.react-bootstrap-buttons---btn-group-vertical---18Ksr > .react-bootstrap-buttons---btn---29cLb:not(:last-child):not(.react-bootstrap-buttons---dropdown-toggle---2v87e),
+.react-bootstrap-buttons---btn-group-vertical---18Ksr > .react-bootstrap-buttons---btn---29cLb:not(:last-child),
 .react-bootstrap-buttons---btn-group-vertical---18Ksr > .react-bootstrap-buttons---btn-group---3NxJk:not(:last-child) > .react-bootstrap-buttons---btn---29cLb {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -899,35 +899,5 @@ input[type="button"].react-bootstrap-buttons---btn-block---3KvdE {
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-}
-.react-bootstrap-buttons---dropdown-toggle---2v87e {
-  min-width: 0;
-}
-.react-bootstrap-buttons---dropdown-toggle---2v87e.react-bootstrap-buttons---btn---29cLb {
-  text-align: left;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-.react-bootstrap-buttons---dropdown-toggle---2v87e.react-bootstrap-buttons---btn-compact---3u8ON {
-  text-align: center;
-}
-.react-bootstrap-buttons---dropdown-toggle---2v87e.react-bootstrap-buttons---btn-link---10udn {
-  color: #222;
-  padding-left: 0;
-  padding-right: 0;
-  text-decoration: none;
-}
-.react-bootstrap-buttons---dropdown-toggle---2v87e.react-bootstrap-buttons---btn-link---10udn:hover,
-.react-bootstrap-buttons---dropdown-toggle---2v87e.react-bootstrap-buttons---btn-link---10udn:hover > * {
-  color: #0096cc;
-}
-.react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn---29cLb + .react-bootstrap-buttons---dropdown-toggle---2v87e {
-  padding-left: 8px;
-  padding-right: 8px;
-  min-width: 0;
-}
-.react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn-lg---2PxtT + .react-bootstrap-buttons---dropdown-toggle---2v87e {
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
