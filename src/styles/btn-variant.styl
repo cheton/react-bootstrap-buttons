@@ -1,0 +1,99 @@
+@import "variables";
+@import "functions";
+
+gradient-background($color) {
+    if ($enable-gradients) {
+        background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+    } else {
+        background-color: $color;
+    }
+}
+
+button-variant(
+    $background,
+    $border,
+    $hover-background = darken($background, 15%),
+    $hover-border = darken($border, 20%),
+    $active-background = darken($background, 20%),
+    $active-border = darken($border, 25%),
+) {
+    color: color-yiq($background);
+    gradient-background($background);
+    border-color: $border;
+
+    .btn& > * {
+        color: color-yiq($background);
+    }
+
+    &.hover,
+    &:hover {
+        color: color-yiq($hover-background);
+        gradient-background($hover-background);
+        border-color: $hover-border;
+    }
+
+    &.focus,
+    &:focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        if ($enable-shadows) {
+            box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
+        } else {
+            box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+        }
+        box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: color-yiq($background);
+        background-color: $background;
+        border-color: $border;
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active {
+        color: color-yiq($active-background);
+        background-color: $active-background;
+        if ($enable-gradients) {
+            background-image: none; // Remove the gradient for the pressed/active state
+        }
+        border-color: $active-border;
+
+        &.focus,
+        &:focus {
+            if ($enable-shadows) {
+                box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
+            } else {
+                box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+            }
+        }
+    }
+}
+
+.btn-default {
+    button-variant($white, $default);
+}
+.btn-primary {
+    button-variant($primary, $primary);
+}
+.btn-secondary {
+    button-variant($secondary, $secondary);
+}
+.btn-danger {
+    button-variant($danger, $danger);
+}
+.btn-warning {
+    button-variant($warning, $warning);
+}
+.btn-info {
+    button-variant($info, $info);
+}
+.btn-success {
+    button-variant($success, $success);
+}
+.btn-light {
+    button-variant($light, $light);
+}
+.btn-dark {
+    button-variant($dark, $dark);
+}

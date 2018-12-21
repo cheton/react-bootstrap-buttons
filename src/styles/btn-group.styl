@@ -1,0 +1,91 @@
+@import "variables";
+
+//
+// Button group
+//
+
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle; // match .btn alignment given font-size hack above
+
+    > .btn {
+        position: relative;
+        flex: 0 1 auto;
+
+        // Bring the hover, focused, and "active" buttons to the front to overlay
+        // the borders properly
+        &.hover,
+        &:hover {
+            z-index: 1;
+        }
+
+        &.focus,
+        &:focus,
+        &.active,
+        &:active {
+            z-index: 1;
+        }
+    }
+
+    // Prevent double borders when buttons are next to each other
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: -($btn-border-width);
+    }
+}
+
+.btn-group {
+    > .btn:first-child {
+        margin-left: 0;
+    }
+
+    // Reset rounded corners
+    > .btn:not(:last-child):not(.dropdown-toggle),
+    > .btn-group:not(:last-child) > .btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    > .btn:not(:first-child),
+    > .btn-group:not(:first-child) > .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.btn-group-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .btn,
+    .btn-group {
+        width: 100%;
+    }
+
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+        margin-top: -($btn-border-width);
+        margin-left: 0;
+    }
+
+    // Reset rounded corners
+    > .btn:not(:last-child):not(.dropdown-toggle),
+    > .btn-group:not(:last-child) > .btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    > .btn:not(:first-child),
+    > .btn-group:not(:first-child) > .btn {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}

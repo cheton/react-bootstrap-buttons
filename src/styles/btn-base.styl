@@ -1,0 +1,59 @@
+@import "variables";
+
+.btn {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: $btn-border-width solid transparent;
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: 1rem;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &.focus,
+    &:focus,
+    &.hover,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.focus,
+    &:focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        if ($enable-shadows) {
+            box-shadow: none;
+        }
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active {
+        background-image: none;
+        if ($enable-shadows) {
+            box-shadow: $btn-active-box-shadow;
+        }
+        &.focus,
+        &:focus {
+            if ($enable-shadows) {
+                box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+            }
+        }
+    }
+
+    + .btn {
+        margin-left: 8px;
+    }
+}

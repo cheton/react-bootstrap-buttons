@@ -1,0 +1,40 @@
+@import "variables";
+
+button-size(
+    $padding-y,
+    $padding-x,
+    $font-size,
+    $line-height,
+    $border-radius,
+) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+
+    // Manually declare to provide an override to the browser default
+    if ($enable-rounded) {
+        border-radius: $border-radius;
+    } else {
+        border-radius: 0;
+    }
+}
+
+.btn-xs,
+.btn-group-xs > .btn {
+    button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+    button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+.btn-md,
+.btn-group-md > .btn {
+    button-size($btn-padding-y-md, $btn-padding-x-md, $font-size-md, $btn-line-height-md, $btn-border-radius-md);
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+    button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
