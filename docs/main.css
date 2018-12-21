@@ -438,7 +438,10 @@
   background-color: #dee2e6;
   border-color: #dee2e6;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(222,226,230,0.5);
   box-shadow: 0 0 0 0.2rem rgba(222,226,230,0.5);
 }
@@ -473,7 +476,10 @@
   background-color: #007bff;
   border-color: #007bff;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-primary---283HU:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-primary---283HU:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-primary---283HU:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-primary---283HU:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.5);
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.5);
 }
@@ -508,7 +514,10 @@
   background-color: #6c757d;
   border-color: #6c757d;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-secondary---1byXW:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-secondary---1byXW:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-secondary---1byXW:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-secondary---1byXW:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(108,117,125,0.5);
   box-shadow: 0 0 0 0.2rem rgba(108,117,125,0.5);
 }
@@ -543,7 +552,10 @@
   background-color: #dc3545;
   border-color: #dc3545;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-danger---3VZni:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-danger---3VZni:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-danger---3VZni:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-danger---3VZni:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.5);
   box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.5);
 }
@@ -578,7 +590,10 @@
   background-color: #ffc107;
   border-color: #ffc107;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.5);
   box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.5);
 }
@@ -613,7 +628,10 @@
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-info---1571M:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-info---1571M:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-info---1571M:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-info---1571M:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(23,162,184,0.5);
   box-shadow: 0 0 0 0.2rem rgba(23,162,184,0.5);
 }
@@ -648,7 +666,10 @@
   background-color: #28a745;
   border-color: #28a745;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-success---1xyAY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-success---1xyAY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-success---1xyAY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-success---1xyAY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40,167,69,0.5);
   box-shadow: 0 0 0 0.2rem rgba(40,167,69,0.5);
 }
@@ -683,7 +704,10 @@
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(248,249,250,0.5);
   box-shadow: 0 0 0 0.2rem rgba(248,249,250,0.5);
 }
@@ -718,7 +742,10 @@
   background-color: #343a40;
   border-color: #343a40;
 }
-@else {
+.react-bootstrap-buttons---btn-outline-dark---3WnOp:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-dark---3WnOp:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active.react-bootstrap-buttons---focus---W2u1z,
+.react-bootstrap-buttons---btn-outline-dark---3WnOp:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT:focus,
+.react-bootstrap-buttons---btn-outline-dark---3WnOp:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(52,58,64,0.5);
   box-shadow: 0 0 0 0.2rem rgba(52,58,64,0.5);
 }
