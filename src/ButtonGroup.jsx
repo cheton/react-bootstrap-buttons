@@ -17,7 +17,6 @@ const ButtonGroup = ({
     btnSize,
     btnStyle,
     vertical,
-    dropdownOpen,
     children,
     className,
     ...props
@@ -29,7 +28,6 @@ const ButtonGroup = ({
         [styles.btnGroupMd]: btnSize === 'medium' || btnSize === 'md',
         [styles.btnGroupSm]: btnSize === 'small' || btnSize === 'sm',
         [styles.btnGroupXs]: btnSize === 'extra-small' || btnSize === 'xs',
-        [styles.open]: dropdownOpen
     };
 
     return (
@@ -56,18 +54,18 @@ const ButtonGroup = ({
 };
 
 ButtonGroup.propTypes = {
+    // Component size variations.
     btnSize: PropTypes.oneOf(btnSizes),
-    btnStyle: PropTypes.oneOf(btnStyles),
-    vertical: PropTypes.bool,
 
-    // Apply styles for use in a Dropdown.
-    // This prop will be set automatically when the ButtonGroup is used inside a Dropdown.
-    dropdownOpen: PropTypes.bool
+    // Component visual or contextual style variants.
+    btnStyle: PropTypes.oneOf(btnStyles),
+
+    // Specifies whether a button group should be aligned vertically or not.
+    vertical: PropTypes.bool,
 };
 
 ButtonGroup.defaultProps = {
     vertical: false,
-    dropdownOpen: false
 };
 
 export default ButtonGroup;

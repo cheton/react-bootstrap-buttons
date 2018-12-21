@@ -17,12 +17,11 @@ const Button = ({
     btnSize,
     btnStyle,
     outline,
+    block,
     active,
     hover,
     focus,
     disabled,
-    block,
-    dropdownToggle,
     ...props
 }) => {
     const classes = {
@@ -54,7 +53,6 @@ const Button = ({
         [styles.hover]: hover,
         [styles.active]: active,
         [styles.focus]: focus,
-        [styles.dropdownToggle]: dropdownToggle
     };
 
     return (
@@ -68,27 +66,42 @@ const Button = ({
 };
 
 Button.propTypes = {
+    // Pass in a component to override default button element.
     tag: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.string
     ]),
+
+    // Specifies the type of button.
     type: PropTypes.oneOf([
         'button',
         'reset',
         'submit'
     ]),
+
+    // Component size variations.
     btnSize: PropTypes.oneOf(btnSizes),
+
+    // Component visual or contextual style variants.
     btnStyle: PropTypes.oneOf(btnStyles),
+
+    // Specifies whether to remove background image and color on a button.
     outline: PropTypes.bool,
-    active: PropTypes.bool,
-    hover: PropTypes.bool,
-    focus: PropTypes.bool,
-    disabled: PropTypes.bool,
+
+    // Specifies whether to span the full width of a parent.
     block: PropTypes.bool,
 
-    // Apply styles for use in a Dropdown.
-    // This prop will be set automatically when the Button is used inside a Dropdown.
-    dropdownToggle: PropTypes.bool
+    // Specifies whether to add active effect to a button.
+    active: PropTypes.bool,
+
+    // Specifies whether to add hover effect to a button.
+    hover: PropTypes.bool,
+
+    // Specifies whether to add focus effect to a button.
+    focus: PropTypes.bool,
+
+    // Specifies whether a button should be disabled or not.
+    disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -97,12 +110,11 @@ Button.defaultProps = {
     btnSize: 'md',
     btnStyle: 'default',
     outline: false,
+    block: false,
     active: false,
     hover: false,
     focus: false,
     disabled: false,
-    block: false,
-    dropdownToggle: false
 };
 
 export default Button;

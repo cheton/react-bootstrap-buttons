@@ -52,24 +52,24 @@ import { Button } from 'app/components/Buttons';
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-tag | Function or String | 'button' |
-type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' |
-btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/>'large'<br/>'medium'<br/>'small'<br/>'extra-small' | 'md' |
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' |
-outline | Boolean | false |
-active | Boolean | false |
-hover | Boolean | false |
-focus | Boolean | flase |
-disabled | Boolean | flase |
-block | Boolean | false |
+tag | Function or String | 'button' | Pass in a component to override default button element.
+type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
+btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/>'large'<br/>'medium'<br/>'small'<br/>'extra-small' | 'md' | Component size variations.
+btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
+outline | Boolean | false | Specifies whether to remove background image and color on a button.
+block | Boolean | false | Specifies whether to span the full width of a parent.
+active | Boolean | false | Specifies whether to add active effect to a button.
+hover | Boolean | false | Specifies whether to add hover effect to a button.
+focus | Boolean | flase | Specifies whether to add focus effect to a button.
+disabled | Boolean | flase | Specifies whether a button should be disabled or not.
 
 #### ButtonGroup
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/>'large'<br/>'medium'<br/>'small'<br/>'extra-small' | |
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' |
-vertical | Boolean | false |
+btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/>'large'<br/>'medium'<br/>'small'<br/>'extra-small' | | Component size variations.
+btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
+vertical | Boolean | false | Specifies whether a button group should be aligned vertically or not.
 
 #### ButtonToolbar
 
