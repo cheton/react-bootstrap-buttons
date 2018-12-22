@@ -56,7 +56,7 @@
 
 ### Vertical variation
 
-```js
+```jsx
 <ButtonGroup vertical btnStyle="secondary">
     <Button>Button</Button>
     <Button>Button</Button>
