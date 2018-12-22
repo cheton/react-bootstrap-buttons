@@ -23,7 +23,7 @@ Demo: https://cheton.github.io/react-bootstrap-buttons
   import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
   ```
 
-## Recommended Setup
+### Recommended Setup
 
 Create a `Buttons` component inside your common components directory:
 ```
@@ -43,6 +43,15 @@ Then, import `Button` component in your code:
 ```js
 import { Button } from 'app/components/Buttons';
 ```
+
+## Examples
+
+Examples for each component can be seen in [the documentation](examples).
+
+Here are some online demos of each component:
+* [Button](https://cheton.github.io/react-bootstrap-buttons/#button)
+* [ButtonGroup](https://cheton.github.io/react-bootstrap-buttons/#buttongroup)
+* [ButtonToolbar](https://cheton.github.io/react-bootstrap-buttons/#buttontoolbar)
 
 ## API
 
