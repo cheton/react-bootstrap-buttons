@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-buttons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Bootstrap buttons.",
   "main": "lib/index.js",
   "files": [
@@ -42,7 +42,7 @@
     "react",
     "bootstrap",
     "buttons",
-    "component"    
+    "component"
   ],
   "peerDependencies": {
     "react": "^0.14.0 || >=15.0.0"

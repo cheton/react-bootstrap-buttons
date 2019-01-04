@@ -823,9 +823,9 @@ input[type="button"].react-bootstrap-buttons---btn-block---3KvdE {
   -moz-box-flex: 1;
   -o-box-flex: 1;
   box-flex: 1;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .react-bootstrap-buttons---btn-group---3NxJk > .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-group-vertical---18Ksr > .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---hover---1Td5o,
