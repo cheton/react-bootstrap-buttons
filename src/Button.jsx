@@ -69,7 +69,13 @@ Button.propTypes = {
     // Pass in a component to override default button element.
     tag: PropTypes.oneOfType([
         PropTypes.func,
-        PropTypes.string
+        PropTypes.string,
+        PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+        PropTypes.arrayOf(PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.string,
+            PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+        ]))
     ]),
 
     // Specifies the type of button.
