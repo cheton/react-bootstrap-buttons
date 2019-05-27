@@ -1,12 +1,22 @@
-color-yiq($color) {
+@import "variables";
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold = 150;
+
+// Customize the light and dark text colors for use in the YIQ color contrast function.
+$yiq-text-dark = $gray-900;
+$yiq-text-light = $white;
+
+// Color contrast
+color-yiq($color, $dark = $yiq-text-dark, $light = $yiq-text-light) {
     $r = red($color);
     $g = green($color);
     $b = blue($color);
     $yiq = (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
-    if ($yiq >= 150) {
-        return #111
+    if ($yiq >= $yiq-contrasted-threshold) {
+        return $dark;
     } else {
-        return #fff
+        return $light;
     }
 }
