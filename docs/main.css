@@ -48,16 +48,16 @@
   margin-left: 8px;
 }
 .react-bootstrap-buttons---btn-default---1f4Gv {
-  color: #111;
+  color: #212529;
   background-color: #fff;
   border-color: #dee2e6;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-default---1f4Gv > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-default---1f4Gv.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-default---1f4Gv:hover {
-  color: #111;
+  color: #212529;
   background-color: #d9d9d9;
   border-color: #abb5bf;
 }
@@ -70,13 +70,13 @@
 }
 .react-bootstrap-buttons---btn-default---1f4Gv.react-bootstrap-buttons---disabled---1fb6W,
 .react-bootstrap-buttons---btn-default---1f4Gv:disabled {
-  color: #111;
+  color: #212529;
   background-color: #fff;
   border-color: #dee2e6;
 }
 .react-bootstrap-buttons---btn-default---1f4Gv:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-default---1f4Gv:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #ccc;
   border-color: #9ea9b5;
 }
@@ -208,16 +208,16 @@
   box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.5);
 }
 .react-bootstrap-buttons---btn-warning---2gaS7 {
-  color: #111;
+  color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-warning---2gaS7 > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-warning---2gaS7.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-warning---2gaS7:hover {
-  color: #111;
+  color: #212529;
   background-color: #dfa700;
   border-color: #d29d00;
 }
@@ -230,13 +230,13 @@
 }
 .react-bootstrap-buttons---btn-warning---2gaS7.react-bootstrap-buttons---disabled---1fb6W,
 .react-bootstrap-buttons---btn-warning---2gaS7:disabled {
-  color: #111;
+  color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 .react-bootstrap-buttons---btn-warning---2gaS7:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-warning---2gaS7:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #d29d00;
   border-color: #c49300;
 }
@@ -328,16 +328,16 @@
   box-shadow: 0 0 0 0.2rem rgba(40,167,69,0.5);
 }
 .react-bootstrap-buttons---btn-light---L5xmB {
-  color: #111;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-light---L5xmB > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-light---L5xmB.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-light---L5xmB:hover {
-  color: #111;
+  color: #212529;
   background-color: #ccd4db;
   border-color: #bec7d0;
 }
@@ -350,13 +350,13 @@
 }
 .react-bootstrap-buttons---btn-light---L5xmB.react-bootstrap-buttons---disabled---1fb6W,
 .react-bootstrap-buttons---btn-light---L5xmB:disabled {
-  color: #111;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 .react-bootstrap-buttons---btn-light---L5xmB:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-light---L5xmB:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #bec7d0;
   border-color: #afbbc6;
 }
@@ -414,11 +414,11 @@
   border-color: #dee2e6;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-outline-default---1KOQY > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-outline-default---1KOQY.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-outline-default---1KOQY:hover {
-  color: #111;
+  color: #212529;
   background-color: #dee2e6;
   border-color: #dee2e6;
 }
@@ -434,7 +434,7 @@
 }
 .react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-outline-default---1KOQY:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #dee2e6;
   border-color: #dee2e6;
 }
@@ -566,11 +566,11 @@
   border-color: #ffc107;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-outline-warning---1VgNg > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-outline-warning---1VgNg.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-outline-warning---1VgNg:hover {
-  color: #111;
+  color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
@@ -586,7 +586,7 @@
 }
 .react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-outline-warning---1VgNg:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
@@ -680,11 +680,11 @@
   border-color: #f8f9fa;
 }
 .react-bootstrap-buttons---btn---29cLb.react-bootstrap-buttons---btn-outline-light---2ENcu > * {
-  color: #111;
+  color: #212529;
 }
 .react-bootstrap-buttons---btn-outline-light---2ENcu.react-bootstrap-buttons---hover---1Td5o,
 .react-bootstrap-buttons---btn-outline-light---2ENcu:hover {
-  color: #111;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -700,7 +700,7 @@
 }
 .react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W).react-bootstrap-buttons---active---13vGT,
 .react-bootstrap-buttons---btn-outline-light---2ENcu:not(:disabled):not(.react-bootstrap-buttons---disabled---1fb6W):active {
-  color: #111;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
