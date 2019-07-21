@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import React, { cloneElement } from 'react';
 import Button from './Button';
 import {
-    btnSizes,
+    btnSizes, // deprecated
     btnStyles
 } from './constants';
+import deprecate from './deprecate';
 import styles from './styles/index.styl';
 
 const getComponentType = (Component) => (Component ? (<Component />).type : undefined);
@@ -14,20 +15,52 @@ const getComponentType = (Component) => (Component ? (<Component />).type : unde
  * @example ../examples/ButtonGroup.md
  */
 const ButtonGroup = ({
-    btnSize,
+    btnSize, // deprecated
+    lg,
+    md,
+    sm,
+    xs,
     btnStyle,
     vertical,
     children,
     className,
     ...props
 }) => {
+    if (btnSize !== undefined) {
+        const deprecatedPropName = 'btnSize';
+        const remappedPropName = 'lg|md|sm|xs';
+
+        deprecate({ deprecatedPropName, remappedPropName });
+
+        lg = (btnSize === 'large' || btnSize === 'lg');
+        md = (btnSize === 'medium' || btnSize === 'md');
+        sm = (btnSize === 'small' || btnSize === 'sm');
+        xs = (btnSize === 'extra-small' || btnSize === 'xs');
+    }
+
+    if (lg) {
+        md = false;
+        sm = false;
+        xs = false;
+    }
+    if (md) {
+        sm = false;
+        xs = false;
+    }
+    if (sm) {
+        xs = false;
+    }
+    if (!lg && !md && !sm && !xs) {
+        md = true;
+    }
+
     const classes = {
         [styles.btnGroup]: !vertical,
         [styles.btnGroupVertical]: !!vertical,
-        [styles.btnGroupLg]: btnSize === 'large' || btnSize === 'lg',
-        [styles.btnGroupMd]: btnSize === 'medium' || btnSize === 'md',
-        [styles.btnGroupSm]: btnSize === 'small' || btnSize === 'sm',
-        [styles.btnGroupXs]: btnSize === 'extra-small' || btnSize === 'xs',
+        [styles.btnGroupLg]: lg,
+        [styles.btnGroupMd]: md,
+        [styles.btnGroupSm]: sm,
+        [styles.btnGroupXs]: xs,
     };
 
     return (
@@ -54,8 +87,20 @@ const ButtonGroup = ({
 };
 
 ButtonGroup.propTypes = {
-    // Component size variations.
+    // [deprecated] Component size variations.
     btnSize: PropTypes.oneOf(btnSizes),
+
+    // Large button group.
+    lg: PropTypes.bool,
+
+    // Medium button group.
+    md: PropTypes.bool,
+
+    // Small button group.
+    sm: PropTypes.bool,
+
+    // Extra small button group.
+    xs: PropTypes.bool,
 
     // Component visual or contextual style variants.
     btnStyle: PropTypes.oneOf(btnStyles),

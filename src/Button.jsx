@@ -2,9 +2,10 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-    btnSizes,
+    btnSizes, // deprecated
     btnStyles
 } from './constants';
+import deprecate from './deprecate';
 import styles from './styles/index.styl';
 
 /**
@@ -14,7 +15,11 @@ const Button = ({
     className,
     tag: Component,
     type,
-    btnSize,
+    btnSize, // deprecated
+    lg,
+    md,
+    sm,
+    xs,
     btnStyle,
     outline,
     block,
@@ -24,12 +29,40 @@ const Button = ({
     disabled,
     ...props
 }) => {
+    if (btnSize !== undefined) {
+        const deprecatedPropName = 'btnSize';
+        const remappedPropName = 'lg|md|sm|xs';
+
+        deprecate({ deprecatedPropName, remappedPropName });
+
+        lg = (btnSize === 'large' || btnSize === 'lg');
+        md = (btnSize === 'medium' || btnSize === 'md');
+        sm = (btnSize === 'small' || btnSize === 'sm');
+        xs = (btnSize === 'extra-small' || btnSize === 'xs');
+    }
+
+    if (lg) {
+        md = false;
+        sm = false;
+        xs = false;
+    }
+    if (md) {
+        sm = false;
+        xs = false;
+    }
+    if (sm) {
+        xs = false;
+    }
+    if (!lg && !md && !sm && !xs) {
+        md = true;
+    }
+
     const classes = {
         [styles.btn]: true,
-        [styles.btnLg]: btnSize === 'large' || btnSize === 'lg',
-        [styles.btnMd]: btnSize === 'medium' || btnSize === 'md',
-        [styles.btnSm]: btnSize === 'small' || btnSize === 'sm',
-        [styles.btnXs]: btnSize === 'extra-small' || btnSize === 'xs',
+        [styles.btnLg]: lg,
+        [styles.btnMd]: md,
+        [styles.btnSm]: sm,
+        [styles.btnXs]: xs,
         [styles.btnDefault]: btnStyle === 'default' && !outline,
         [styles.btnPrimary]: btnStyle === 'primary' && !outline,
         [styles.btnSecondary]: btnStyle === 'secondary' && !outline,
@@ -85,8 +118,20 @@ Button.propTypes = {
         'submit'
     ]),
 
-    // Component size variations.
+    // [deprecated] Component size variations.
     btnSize: PropTypes.oneOf(btnSizes),
+
+    // Large button.
+    lg: PropTypes.bool,
+
+    // Medium button.
+    md: PropTypes.bool,
+
+    // Small button.
+    sm: PropTypes.bool,
+
+    // Extra small button.
+    xs: PropTypes.bool,
 
     // Component visual or contextual style variants.
     btnStyle: PropTypes.oneOf(btnStyles),
@@ -113,7 +158,6 @@ Button.propTypes = {
 Button.defaultProps = {
     tag: 'button',
     type: 'button',
-    btnSize: 'md',
     btnStyle: 'default',
     outline: false,
     block: false,

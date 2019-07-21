@@ -1,17 +1,14 @@
 const path = require('path');
-const stylusLoader = require('stylus-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const nib = require('nib');
 const webpack = require('webpack');
 const pkg = require('./package.json');
 
-const localIdentName = pkg.name;
-
 const webpackConfig = {
-    mode: 'production',
-    devtool: 'source-map',
+    mode: 'development',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
-        disableHostCheck: true
+        disableHostCheck: true,
+        contentBase: path.resolve(__dirname, 'docs'),
     },
     entry: path.resolve(__dirname, 'src/index.js'),
     module: {
@@ -31,7 +28,16 @@ const webpackConfig = {
                 test: /\.styl$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    `css-loader?camelCase&modules&importLoaders=1&localIdentName=${localIdentName}---[local]---[hash:base64:5]`,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[local]---[hash:base64:5]',
+                            },
+                            importLoaders: 1,
+                            localsConvention: 'camelCase',
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
@@ -67,14 +73,6 @@ const webpackConfig = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-        new stylusLoader.OptionsPlugin({
-            default: {
-                // nib - CSS3 extensions for Stylus
-                use: [nib()],
-                // no need to have a '@import "nib"' in the stylesheet
-                import: ['~nib/lib/nib/index.styl']
-            }
-        }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         })
@@ -85,20 +83,39 @@ const webpackConfig = {
 };
 
 module.exports = {
-    title: 'React Bootatrap Buttons',
-    serverPort: 8080,
-    styleguideDir: 'docs/',
-    webpackConfig: webpackConfig,
-    components: ['src/**/*.jsx'],
+    title: `React Bootatrap Buttons v${pkg.version}`,
+    sections: [
+        {
+            name: 'Button',
+            content: path.resolve(__dirname, 'styleguide/examples/Button.md'),
+        },
+        {
+            name: 'ButtonGroup',
+            content: path.resolve(__dirname, 'styleguide/examples/ButtonGroup.md'),
+        },
+        {
+            name: 'ButtonToolbar',
+            content: path.resolve(__dirname, 'styleguide/examples/ButtonToolbar.md'),
+        }
+    ],
+    require: [
+        '@babel/polyfill',
+        path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/css/all.css'),
+        path.resolve(__dirname, 'styleguide/setup.js'),
+        path.resolve(__dirname, 'styleguide/styles.css')
+    ],
     ribbon: {
         url: pkg.homepage,
         text: 'Fork me on GitHub'
     },
-    require: [
-        '@babel/polyfill',
-        path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/css/all.css')
-    ],
-    theme: {
-        maxWidth: '100%'
-    }
+    serverPort: 8080,
+    exampleMode: 'expand',
+    usageMode: 'expand',
+    showSidebar: true,
+    styleguideComponents: {
+        StyleGuideRenderer: path.join(__dirname, 'styleguide/components/StyleGuideRenderer.jsx'),
+        Wrapper: path.join(__dirname, 'styleguide/components/Wrapper.jsx'),
+    },
+    styleguideDir: 'docs/',
+    webpackConfig: webpackConfig
 };
