@@ -1,11 +1,8 @@
 const path = require('path');
 const stylusLoader = require('stylus-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const nib = require('nib');
 const webpack = require('webpack');
 const pkg = require('./package.json');
-
-const localIdentName = pkg.name;
 
 const webpackConfig = {
     mode: 'production',
@@ -31,7 +28,16 @@ const webpackConfig = {
                 test: /\.styl$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    `css-loader?camelCase&modules&importLoaders=1&localIdentName=${localIdentName}---[local]---[hash:base64:5]`,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: `${pkg.name}---[local]---[hash:base64:5]`,
+                            },
+                            importLoaders: 1,
+                            localsConvention: 'camelCase',
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
@@ -65,14 +71,6 @@ const webpackConfig = {
             'process.env': {
                 // This has effect on the react lib size
                 NODE_ENV: JSON.stringify('production')
-            }
-        }),
-        new stylusLoader.OptionsPlugin({
-            default: {
-                // nib - CSS3 extensions for Stylus
-                use: [nib()],
-                // no need to have a '@import "nib"' in the stylesheet
-                import: ['~nib/lib/nib/index.styl']
             }
         }),
         new MiniCssExtractPlugin({
