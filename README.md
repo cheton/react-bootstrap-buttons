@@ -64,7 +64,7 @@ Name | Type | Default | Description
 tag | Function or String | 'button' | Pass in a component to override default button element.
 type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
 lg | Boolean | | Large button.
-md | Boolean | | Medium button.
+md | Boolean | | Medium button. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button.
 xs | Boolean | | Extra small button.
 btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
@@ -80,7 +80,7 @@ disabled | Boolean | flase | Specifies whether a button should be disabled or no
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 lg | Boolean | | Large button group.
-md | Boolean | | Medium button group.
+md | Boolean | | Medium button group. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button group.
 xs | Boolean | | Extra small button group.
 btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
