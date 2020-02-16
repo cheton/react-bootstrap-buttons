@@ -17,7 +17,7 @@ Demo: https://cheton.github.io/react-bootstrap-buttons
 2. Import `react-bootstrap-buttons` and its styles in your application as follows:
 
   ```js
-  import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+  import { Button, ButtonBase, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
@@ -36,7 +36,7 @@ components/
 ```js
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 
-export { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+export { Button, ButtonBase, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 ```
 
 Then, import `Button` component in your code:
@@ -50,6 +50,7 @@ Examples for each component can be seen in [the documentation](examples).
 
 Here are some online demos of each component:
 * [Button](https://cheton.github.io/react-bootstrap-buttons/#button)
+* [ButtonBase](https://cheton.github.io/react-bootstrap-buttons/#buttonbase)
 * [ButtonGroup](https://cheton.github.io/react-bootstrap-buttons/#buttongroup)
 * [ButtonToolbar](https://cheton.github.io/react-bootstrap-buttons/#buttontoolbar)
 
@@ -76,6 +77,14 @@ hover | Boolean | false | Specifies whether to add hover effect to a button.
 focus | Boolean | flase | Specifies whether to add focus effect to a button.
 disabled | Boolean | flase | Specifies whether a button should be disabled or not.
 
+#### ButtonBase
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+tag | Function or String | 'button' | Pass in a component to override default element.
+type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
+disabled | Boolean | flase | Specifies whether a button should be disabled or not.
+
 #### ButtonGroup
 
 Name | Type | Default | Description 
@@ -94,14 +103,6 @@ vertical | Boolean | false | Specifies whether a button group should be aligned 
 Name | Type | Default | Description
 :--- | :--- | :------ | :----------
 tag | Function or String | 'div' | Pass in a component to override default element.
-
-#### ButtonBase
-
-Name | Type | Default | Description 
-:--- | :--- | :------ | :----------
-tag | Function or String | 'button' | Pass in a component to override default element.
-type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
-disabled | Boolean | flase | Specifies whether a button should be disabled or not.
 
 ## License
 
