@@ -23,7 +23,7 @@ const ButtonGroup = React.forwardRef((
         xs,
         btnSize, // deprecated
         size,
-        btnVariant, // deprecated
+        btnStyle, // deprecated
         variant,
         vertical,
         children,
