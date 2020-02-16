@@ -1,4 +1,6 @@
-### Button groups
+`ButtonGroup` is used to group related buttons.
+
+### Basic usage
 
 ```jsx
 <ButtonGroup>

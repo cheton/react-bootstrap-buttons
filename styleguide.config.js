@@ -96,7 +96,11 @@ module.exports = {
         {
             name: 'ButtonToolbar',
             content: path.resolve(__dirname, 'styleguide/examples/ButtonToolbar.md'),
-        }
+        },
+        {
+            name: 'ButtonBase',
+            content: path.resolve(__dirname, 'styleguide/examples/ButtonBase.md'),
+        },
     ],
     require: [
         '@babel/polyfill',

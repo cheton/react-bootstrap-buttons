@@ -1,4 +1,6 @@
-### Buttons
+`Button` is used to trigger an action or event, such as submitting a form, opening a modal, canceling an action, or performing a delete operation.
+
+### Solid buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -15,7 +17,7 @@
 </Stack>
 ```
 
-### Outline Buttons
+### Outline buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -35,7 +37,7 @@
 
 Defaults to medium button if not specified.
 
-#### Large button
+#### Large buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -58,7 +60,7 @@ Defaults to medium button if not specified.
 </Stack>
 ```
 
-#### Medium button
+#### Medium buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -81,7 +83,7 @@ Defaults to medium button if not specified.
 </Stack>
 ```
 
-#### Small button
+#### Small buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -104,7 +106,7 @@ Defaults to medium button if not specified.
 </Stack>
 ```
 
-#### Extra size="sm"all button
+#### Extra small buttons
 
 ```jsx
 <Stack direction="row" spacing=".5rem" shouldWrapChildren>
@@ -127,7 +129,7 @@ Defaults to medium button if not specified.
 </Stack>
 ```
 
-### Block Buttons
+### Block level buttons
 
 ```jsx
 <Stack direction="column" spacing="1rem" shouldWrapChildren>

@@ -13,9 +13,9 @@ import styles from './styles/index.styl';
  */
 const Button = React.forwardRef((
     {
-        className,
         tag: Component,
         type,
+        className,
         lg,
         md,
         sm,
@@ -122,7 +122,7 @@ const Button = React.forwardRef((
 });
 
 Button.propTypes = {
-    // Pass in a component to override default button element.
+    // Pass in a component to override default element.
     tag: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.string,

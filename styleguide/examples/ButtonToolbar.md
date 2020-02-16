@@ -1,4 +1,6 @@
-### Button toolbar
+`ButtonToolbar` is used to group a set of button groups.
+
+### Basic usage
 
 ```jsx
 <ButtonToolbar>

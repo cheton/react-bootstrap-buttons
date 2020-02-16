@@ -17,6 +17,8 @@ const getComponentType = (Component) => (Component ? (<Component />).type : unde
 const ButtonGroup = React.forwardRef((
     {
         tag: Component,
+        children,
+        className,
         lg,
         md,
         sm,
@@ -26,8 +28,6 @@ const ButtonGroup = React.forwardRef((
         btnStyle, // deprecated
         variant,
         vertical,
-        children,
-        className,
         ...props
     },
     ref,
@@ -111,7 +111,7 @@ const ButtonGroup = React.forwardRef((
 });
 
 ButtonGroup.propTypes = {
-    // Pass in a component to override default button element.
+    // Pass in a component to override default element.
     tag: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.string,
