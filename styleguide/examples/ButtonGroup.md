@@ -1,4 +1,6 @@
-### Button groups
+`ButtonGroup` is used to group related buttons.
+
+### Basic usage
 
 ```jsx
 <ButtonGroup>
@@ -19,7 +21,7 @@ Defaults to medium button group if not specified.
 #### Large button group
 
 ```jsx
-<ButtonGroup lg btnStyle="secondary">
+<ButtonGroup size="lg" variant="secondary">
     <Button>Left</Button>
     <Button>Middle</Button>
     <Button>Right</Button>
@@ -29,7 +31,7 @@ Defaults to medium button group if not specified.
 #### Medium button group
 
 ```jsx
-<ButtonGroup md btnStyle="secondary">
+<ButtonGroup size="md" variant="secondary">
     <Button>Left</Button>
     <Button>Middle</Button>
     <Button>Right</Button>
@@ -39,7 +41,7 @@ Defaults to medium button group if not specified.
 #### Small button group
 
 ```jsx
-<ButtonGroup sm btnStyle="secondary">
+<ButtonGroup size="sm" variant="secondary">
     <Button>Left</Button>
     <Button>Middle</Button>
     <Button>Right</Button>
@@ -49,7 +51,7 @@ Defaults to medium button group if not specified.
 #### Extra small button group
 
 ```jsx
-<ButtonGroup xs btnStyle="secondary">
+<ButtonGroup size="xs" variant="secondary">
     <Button>Left</Button>
     <Button>Middle</Button>
     <Button>Right</Button>
@@ -59,7 +61,7 @@ Defaults to medium button group if not specified.
 ### Vertical variation
 
 ```jsx
-<ButtonGroup vertical btnStyle="secondary">
+<ButtonGroup vertical variant="secondary">
     <Button>Button</Button>
     <Button>Button</Button>
     <Button>Button</Button>

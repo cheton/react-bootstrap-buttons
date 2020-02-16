@@ -34,8 +34,17 @@
 .btn---29cLb:not(:disabled):not(.disabled---1fb6W):active {
   background-image: none;
 }
-.btn---29cLb + .btn---29cLb {
-  margin-left: 8px;
+.btn-base---1eLEk {
+  background: transparent;
+  border: none;
+  color: inherit;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.btn-base---1eLEk.disabled---1fb6W,
+.btn-base---1eLEk:disabled {
+  cursor: default;
 }
 .btn-default---1f4Gv {
   color: #212529;

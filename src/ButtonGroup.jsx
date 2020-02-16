@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React, { cloneElement } from 'react';
 import Button from './Button';
 import {
-    btnSizes, // deprecated
-    btnStyles
+    sizes,
+    variants,
 } from './constants';
 import deprecate from './deprecate';
 import styles from './styles/index.styl';
@@ -14,28 +14,51 @@ const getComponentType = (Component) => (Component ? (<Component />).type : unde
 /**
  * @example ../examples/ButtonGroup.md
  */
-const ButtonGroup = ({
-    btnSize, // deprecated
-    lg,
-    md,
-    sm,
-    xs,
-    btnStyle,
-    vertical,
-    children,
-    className,
-    ...props
-}) => {
+const ButtonGroup = React.forwardRef((
+    {
+        tag: Component,
+        children,
+        className,
+        lg,
+        md,
+        sm,
+        xs,
+        btnSize, // deprecated
+        size,
+        btnStyle, // deprecated
+        variant,
+        vertical,
+        ...props
+    },
+    ref,
+) => {
     if (btnSize !== undefined) {
         const deprecatedPropName = 'btnSize';
-        const remappedPropName = 'lg|md|sm|xs';
+        const remappedPropName = 'size';
 
         deprecate({ deprecatedPropName, remappedPropName });
 
-        lg = (btnSize === 'large' || btnSize === 'lg');
-        md = (btnSize === 'medium' || btnSize === 'md');
-        sm = (btnSize === 'small' || btnSize === 'sm');
-        xs = (btnSize === 'extra-small' || btnSize === 'xs');
+        if (size === undefined) {
+            size = btnSize;
+        }
+    }
+
+    if (btnStyle !== undefined) {
+        const deprecatedPropName = 'btnStyle';
+        const remappedPropName = 'variant';
+
+        deprecate({ deprecatedPropName, remappedPropName });
+
+        if (variant === undefined) {
+            variant = btnStyle;
+        }
+    }
+
+    if (size !== undefined) {
+        lg = (size === 'large' || size === 'lg');
+        md = (size === 'medium' || size === 'md');
+        sm = (size === 'small' || size === 'sm');
+        xs = (size === 'extra-small' || size === 'xs');
     }
 
     if (lg) {
@@ -64,31 +87,41 @@ const ButtonGroup = ({
     };
 
     return (
-        <div
-            {...props}
+        <Component
+            ref={ref}
             className={cx(className, classes)}
+            {...props}
         >
             {React.Children.map(children, child => {
                 if (React.isValidElement(child) && child.type === getComponentType(Button)) {
                     const childProps = {};
-                    if (btnSizes.indexOf(btnSize) >= 0) {
-                        childProps.btnSize = btnSize;
+                    if (sizes.indexOf(size) >= 0) {
+                        childProps.size = size;
                     }
-                    if (btnStyles.indexOf(btnStyle) >= 0) {
-                        childProps.btnStyle = btnStyle;
+                    if (variants.indexOf(variant) >= 0) {
+                        childProps.variant = variant;
                     }
                     return cloneElement(child, childProps);
                 }
 
                 return child;
             })}
-        </div>
+        </Component>
     );
-};
+});
 
 ButtonGroup.propTypes = {
-    // [deprecated] Component size variations.
-    btnSize: PropTypes.oneOf(btnSizes),
+    // Pass in a component to override default element.
+    tag: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.string,
+        PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+        PropTypes.arrayOf(PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.string,
+            PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+        ]))
+    ]),
 
     // Large button group.
     lg: PropTypes.bool,
@@ -102,14 +135,18 @@ ButtonGroup.propTypes = {
     // Extra small button group.
     xs: PropTypes.bool,
 
+    // Component size variations.
+    size: PropTypes.oneOf(sizes),
+
     // Component visual or contextual style variants.
-    btnStyle: PropTypes.oneOf(btnStyles),
+    variant: PropTypes.oneOf(variants),
 
     // Specifies whether a button group should be aligned vertically or not.
     vertical: PropTypes.bool,
 };
 
 ButtonGroup.defaultProps = {
+    tag: 'div',
     vertical: false,
 };
 

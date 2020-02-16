@@ -17,13 +17,13 @@ Demo: https://cheton.github.io/react-bootstrap-buttons
 2. Import `react-bootstrap-buttons` and its styles in your application as follows:
 
   ```js
-  import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+  import { Button, ButtonBase, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
   ```
 
-### Recommended Setup
+### Recommended setup
 
 Create a `Buttons` component inside your common components directory:
 ```
@@ -36,7 +36,7 @@ components/
 ```js
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 
-export { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+export { Button, ButtonBase, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 ```
 
 Then, import `Button` component in your code:
@@ -50,6 +50,7 @@ Examples for each component can be seen in [the documentation](examples).
 
 Here are some online demos of each component:
 * [Button](https://cheton.github.io/react-bootstrap-buttons/#button)
+* [ButtonBase](https://cheton.github.io/react-bootstrap-buttons/#buttonbase)
 * [ButtonGroup](https://cheton.github.io/react-bootstrap-buttons/#buttongroup)
 * [ButtonToolbar](https://cheton.github.io/react-bootstrap-buttons/#buttontoolbar)
 
@@ -61,13 +62,14 @@ Here are some online demos of each component:
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-tag | Function or String | 'button' | Pass in a component to override default button element.
+tag | Function or String | 'button' | Pass in a component to override default element.
 type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
 lg | Boolean | | Large button.
 md | Boolean | | Medium button. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button.
 xs | Boolean | | Extra small button.
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
+size | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/> | 'md' | Component size variations.
+variant | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
 outline | Boolean | false | Specifies whether to remove background image and color on a button.
 block | Boolean | false | Specifies whether to span the full width of a parent.
 active | Boolean | false | Specifies whether to add active effect to a button.
@@ -75,21 +77,32 @@ hover | Boolean | false | Specifies whether to add hover effect to a button.
 focus | Boolean | flase | Specifies whether to add focus effect to a button.
 disabled | Boolean | flase | Specifies whether a button should be disabled or not.
 
+#### ButtonBase
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+tag | Function or String | 'button' | Pass in a component to override default element.
+type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
+disabled | Boolean | flase | Specifies whether a button should be disabled or not.
+
 #### ButtonGroup
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+tag | Function or String | 'div' | Pass in a component to override default element.
 lg | Boolean | | Large button group.
 md | Boolean | | Medium button group. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button group.
 xs | Boolean | | Extra small button group.
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
+size | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/> | 'md' | Component size variations.
+variant | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
 vertical | Boolean | false | Specifies whether a button group should be aligned vertically or not.
 
 #### ButtonToolbar
 
-Name | Type | Default | Description 
+Name | Type | Default | Description
 :--- | :--- | :------ | :----------
+tag | Function or String | 'div' | Pass in a component to override default element.
 
 ## License
 

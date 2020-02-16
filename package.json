@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-buttons",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React Bootstrap buttons.",
   "main": "lib/index.js",
   "files": [
@@ -88,6 +88,7 @@
     "react-styleguidist": "~9.1.11",
     "style-loader": "~0.23.1",
     "styled-components": "~4.3.2",
+    "styled-system": "~5.1.4",
     "stylint": "~2.0.0",
     "stylus": "~0.54.5",
     "stylus-loader": "~3.0.2",

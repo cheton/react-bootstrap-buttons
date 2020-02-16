@@ -83,7 +83,7 @@ const webpackConfig = {
 };
 
 module.exports = {
-    title: `React Bootatrap Buttons v${pkg.version}`,
+    title: `React Bootstrap Buttons v${pkg.version}`,
     sections: [
         {
             name: 'Button',
@@ -96,7 +96,11 @@ module.exports = {
         {
             name: 'ButtonToolbar',
             content: path.resolve(__dirname, 'styleguide/examples/ButtonToolbar.md'),
-        }
+        },
+        {
+            name: 'ButtonBase',
+            content: path.resolve(__dirname, 'styleguide/examples/ButtonBase.md'),
+        },
     ],
     require: [
         '@babel/polyfill',
