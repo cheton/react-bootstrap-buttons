@@ -61,7 +61,7 @@ Here are some online demos of each component:
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-tag | Function or String | 'button' | Pass in a component to override default button element.
+tag | Function or String | 'button' | Pass in a component to override default element.
 type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
 lg | Boolean | | Large button.
 md | Boolean | | Medium button. Defaults to 'md' if nothing is specified.
@@ -80,6 +80,7 @@ disabled | Boolean | flase | Specifies whether a button should be disabled or no
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+tag | Function or String | 'div' | Pass in a component to override default element.
 lg | Boolean | | Large button group.
 md | Boolean | | Medium button group. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button group.
@@ -90,8 +91,17 @@ vertical | Boolean | false | Specifies whether a button group should be aligned 
 
 #### ButtonToolbar
 
+Name | Type | Default | Description
+:--- | :--- | :------ | :----------
+tag | Function or String | 'div' | Pass in a component to override default element.
+
+#### ButtonBase
+
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+tag | Function or String | 'button' | Pass in a component to override default element.
+type | One of:<br/>'button'<br/>'reset'<br/>'submit' | 'button' | Specifies the type of button.
+disabled | Boolean | flase | Specifies whether a button should be disabled or not.
 
 ## License
 
