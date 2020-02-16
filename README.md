@@ -23,7 +23,7 @@ Demo: https://cheton.github.io/react-bootstrap-buttons
   import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
   ```
 
-### Recommended Setup
+### Recommended setup
 
 Create a `Buttons` component inside your common components directory:
 ```
@@ -67,7 +67,8 @@ lg | Boolean | | Large button.
 md | Boolean | | Medium button. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button.
 xs | Boolean | | Extra small button.
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
+size | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/> | 'md' | Component size variations.
+variant | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | 'default' | Component visual or contextual style variants.
 outline | Boolean | false | Specifies whether to remove background image and color on a button.
 block | Boolean | false | Specifies whether to span the full width of a parent.
 active | Boolean | false | Specifies whether to add active effect to a button.
@@ -83,7 +84,8 @@ lg | Boolean | | Large button group.
 md | Boolean | | Medium button group. Defaults to 'md' if nothing is specified.
 sm | Boolean | | Small button group.
 xs | Boolean | | Extra small button group.
-btnStyle | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
+size | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs'<br/> | 'md' | Component size variations.
+variant | One of:<br/>'default'<br/>'primary'<br/>'secondary'<br/>'danger'<br/>'warning'<br/>'info'<br/>'success'<br/>'light'<br/>'dark'<br/>'link'<br/> | | Component visual or contextual style variants.
 vertical | Boolean | false | Specifies whether a button group should be aligned vertically or not.
 
 #### ButtonToolbar
