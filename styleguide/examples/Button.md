@@ -1,30 +1,34 @@
 ### Buttons
 
 ```jsx
-<Button>Default</Button>
-<Button btnStyle="primary">Primary</Button>
-<Button btnStyle="secondary">Secondary</Button>
-<Button btnStyle="success">Success</Button>
-<Button btnStyle="danger">Danger</Button>
-<Button btnStyle="warning">Warning</Button>
-<Button btnStyle="info">Info</Button>
-<Button btnStyle="light">Light</Button>
-<Button btnStyle="dark">Dark</Button>
-<Button btnStyle="link">Link</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button>Default</Button>
+    <Button variant="primary">Primary</Button>
+    <Button variant="secondary">Secondary</Button>
+    <Button variant="success">Success</Button>
+    <Button variant="danger">Danger</Button>
+    <Button variant="warning">Warning</Button>
+    <Button variant="info">Info</Button>
+    <Button variant="light">Light</Button>
+    <Button variant="dark">Dark</Button>
+    <Button variant="link">Link</Button>
+</Stack>
 ```
 
 ### Outline Buttons
 
 ```jsx
-<Button outline>Default</Button>
-<Button outline btnStyle="primary">Primary</Button>
-<Button outline btnStyle="secondary">Secondary</Button>
-<Button outline btnStyle="success">Success</Button>
-<Button outline btnStyle="danger">Danger</Button>
-<Button outline btnStyle="warning">Warning</Button>
-<Button outline btnStyle="info">Info</Button>
-<Button outline btnStyle="light">Light</Button>
-<Button outline btnStyle="dark">Dark</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button outline>Default</Button>
+    <Button outline variant="primary">Primary</Button>
+    <Button outline variant="secondary">Secondary</Button>
+    <Button outline variant="success">Success</Button>
+    <Button outline variant="danger">Danger</Button>
+    <Button outline variant="warning">Warning</Button>
+    <Button outline variant="info">Info</Button>
+    <Button outline variant="light">Light</Button>
+    <Button outline variant="dark">Dark</Button>
+</Stack>
 ```
 
 ### Sizes
@@ -34,88 +38,102 @@ Defaults to medium button if not specified.
 #### Large button
 
 ```jsx
-<Button lg btnStyle="primary">Large button</Button>
-<Button lg btnStyle="secondary">Large button</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="lg" variant="primary">Large button</Button>
+    <Button size="lg" variant="secondary">Large button</Button>
+</Stack>
 ```
 
 ```jsx
-<Button lg><i className="fas fa-table" /></Button>
-<Button lg btnStyle="primary"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="secondary"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="success"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="danger"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="warning"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="info"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="light"><i className="fas fa-table" /></Button>
-<Button lg btnStyle="dark"><i className="fas fa-table" /></Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="lg"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="primary"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="secondary"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="success"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="danger"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="warning"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="info"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="light"><i className="fas fa-table" /></Button>
+    <Button size="lg" variant="dark"><i className="fas fa-table" /></Button>
+</Stack>
 ```
 
 #### Medium button
 
 ```jsx
-<Button md btnStyle="primary">Default button</Button>
-<Button md btnStyle="secondary">Default button</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="md" variant="primary">Default button</Button>
+    <Button size="md" variant="secondary">Default button</Button>
+</Stack>
 ```
 
 ```jsx
-<Button md><i className="fas fa-table" /></Button>
-<Button md btnStyle="primary"><i className="fas fa-table" /></Button>
-<Button md btnStyle="secondary"><i className="fas fa-table" /></Button>
-<Button md btnStyle="success"><i className="fas fa-table" /></Button>
-<Button md btnStyle="danger"><i className="fas fa-table" /></Button>
-<Button md btnStyle="warning"><i className="fas fa-table" /></Button>
-<Button md btnStyle="info"><i className="fas fa-table" /></Button>
-<Button md btnStyle="light"><i className="fas fa-table" /></Button>
-<Button md btnStyle="dark"><i className="fas fa-table" /></Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="md"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="primary"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="secondary"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="success"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="danger"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="warning"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="info"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="light"><i className="fas fa-table" /></Button>
+    <Button size="md" variant="dark"><i className="fas fa-table" /></Button>
+</Stack>
 ```
 
 #### Small button
 
 ```jsx
-<Button sm btnStyle="primary">Small button</Button>
-<Button sm btnStyle="secondary">Small button</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="sm" variant="primary">Small button</Button>
+    <Button size="sm" variant="secondary">Small button</Button>
+</Stack>
 ```
 
 ```jsx
-<Button sm><i className="fas fa-table" /></Button>
-<Button sm btnStyle="primary"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="secondary"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="success"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="danger"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="warning"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="info"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="light"><i className="fas fa-table" /></Button>
-<Button sm btnStyle="dark"><i className="fas fa-table" /></Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="sm"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="primary"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="secondary"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="success"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="danger"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="warning"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="info"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="light"><i className="fas fa-table" /></Button>
+    <Button size="sm" variant="dark"><i className="fas fa-table" /></Button>
+</Stack>
 ```
 
-#### Extra small button
+#### Extra size="sm"all button
 
 ```jsx
-<Button xs btnStyle="primary">Extra small button</Button>
-<Button xs btnStyle="secondary">Extra small button</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="xs" variant="primary">Extra size="sm"all button</Button>
+    <Button size="xs" variant="secondary">Extra size="sm"all button</Button>
+</Stack>
 ```
 
 ```jsx
-<Button xs><i className="fas fa-table" /></Button>
-<Button xs btnStyle="primary"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="secondary"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="success"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="danger"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="warning"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="info"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="light"><i className="fas fa-table" /></Button>
-<Button xs btnStyle="dark"><i className="fas fa-table" /></Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button size="xs"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="primary"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="secondary"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="success"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="danger"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="warning"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="info"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="light"><i className="fas fa-table" /></Button>
+    <Button size="xs" variant="dark"><i className="fas fa-table" /></Button>
+</Stack>
 ```
 
 ### Block Buttons
 
 ```jsx
-<div>
-    <Button block lg btnStyle="primary">Block level button</Button>
-</div>
-<div style={{ marginTop: 10 }}>
-    <Button block lg btnStyle="secondary">Block level button</Button>
-</div>
+<Stack direction="column" spacing="1rem" shouldWrapChildren>
+    <Button block size="lg" variant="primary">Block level button</Button>
+    <Button block size="lg" variant="secondary">Block level button</Button>
+</Stack>
 ```
 
 ### States
@@ -123,34 +141,44 @@ Defaults to medium button if not specified.
 #### Default state
 
 ```jsx
-<Button btnStyle="primary">Default</Button>
-<Button btnStyle="secondary">Default</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button variant="primary">Default</Button>
+    <Button variant="secondary">Default</Button>
+</Stack>
 ```
 
 #### Hover state
 
 ```jsx
-<Button hover btnStyle="primary">Hover</Button>
-<Button hover btnStyle="secondary">Hover</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button hover variant="primary">Hover</Button>
+    <Button hover variant="secondary">Hover</Button>
+</Stack>
 ```
 
 #### Active state
 
 ```jsx
-<Button active btnStyle="primary">Active</Button>
-<Button active btnStyle="secondary">Active</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button active variant="primary">Active</Button>
+    <Button active variant="secondary">Active</Button>
+</Stack>
 ```
 
 #### Focus state
 
 ```jsx
-<Button focus btnStyle="primary">Focus</Button>
-<Button focus btnStyle="secondary">Focus</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button focus variant="primary">Focus</Button>
+    <Button focus variant="secondary">Focus</Button>
+</Stack>
 ```
 
 #### Disabled state
 
 ```jsx
-<Button disabled btnStyle="primary">Disabled</Button>
-<Button disabled btnStyle="secondary">Disabled</Button>
+<Stack direction="row" spacing=".5rem" shouldWrapChildren>
+    <Button disabled variant="primary">Disabled</Button>
+    <Button disabled variant="secondary">Disabled</Button>
+</Stack>
 ```

@@ -83,7 +83,7 @@ const webpackConfig = {
 };
 
 module.exports = {
-    title: `React Bootatrap Buttons v${pkg.version}`,
+    title: `React Bootstrap Buttons v${pkg.version}`,
     sections: [
         {
             name: 'Button',
