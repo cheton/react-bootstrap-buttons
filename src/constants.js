@@ -1,4 +1,4 @@
-export const btnSizes = [
+export const sizes = [
     'lg',
     'md',
     'sm',
@@ -6,10 +6,10 @@ export const btnSizes = [
     'large',
     'medium',
     'small',
-    'extra-small'
+    'extra-small',
 ];
 
-export const btnStyles = [
+export const variants = [
     'default',
     'primary',
     'secondary',
@@ -19,5 +19,5 @@ export const btnStyles = [
     'info',
     'light',
     'dark',
-    'link'
+    'link',
 ];

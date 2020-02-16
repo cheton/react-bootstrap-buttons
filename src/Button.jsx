@@ -2,8 +2,8 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-    btnSizes, // deprecated
-    btnStyles
+    sizes,
+    variants,
 } from './constants';
 import deprecate from './deprecate';
 import styles from './styles/index.styl';
@@ -11,34 +11,56 @@ import styles from './styles/index.styl';
 /**
  * @example ../examples/Button.md
  */
-const Button = ({
-    className,
-    tag: Component,
-    type,
-    btnSize, // deprecated
-    lg,
-    md,
-    sm,
-    xs,
-    btnStyle,
-    outline,
-    block,
-    active,
-    hover,
-    focus,
-    disabled,
-    ...props
-}) => {
+const Button = React.forwardRef((
+    {
+        className,
+        tag: Component,
+        type,
+        lg,
+        md,
+        sm,
+        xs,
+        btnSize, // deprecated
+        size,
+        btnStyle, // deprecated
+        variant,
+        outline,
+        block,
+        active,
+        hover,
+        focus,
+        disabled,
+        ...props
+    },
+    ref,
+) => {
     if (btnSize !== undefined) {
         const deprecatedPropName = 'btnSize';
-        const remappedPropName = 'lg|md|sm|xs';
+        const remappedPropName = 'size';
 
         deprecate({ deprecatedPropName, remappedPropName });
 
-        lg = (btnSize === 'large' || btnSize === 'lg');
-        md = (btnSize === 'medium' || btnSize === 'md');
-        sm = (btnSize === 'small' || btnSize === 'sm');
-        xs = (btnSize === 'extra-small' || btnSize === 'xs');
+        if (size === undefined) {
+            size = btnSize;
+        }
+    }
+
+    if (btnStyle !== undefined) {
+        const deprecatedPropName = 'btnStyle';
+        const remappedPropName = 'variant';
+
+        deprecate({ deprecatedPropName, remappedPropName });
+
+        if (variant === undefined) {
+            variant = btnStyle;
+        }
+    }
+
+    if (size !== undefined) {
+        lg = (size === 'large' || size === 'lg');
+        md = (size === 'medium' || size === 'md');
+        sm = (size === 'small' || size === 'sm');
+        xs = (size === 'extra-small' || size === 'xs');
     }
 
     if (lg) {
@@ -63,25 +85,25 @@ const Button = ({
         [styles.btnMd]: md,
         [styles.btnSm]: sm,
         [styles.btnXs]: xs,
-        [styles.btnDefault]: btnStyle === 'default' && !outline,
-        [styles.btnPrimary]: btnStyle === 'primary' && !outline,
-        [styles.btnSecondary]: btnStyle === 'secondary' && !outline,
-        [styles.btnDanger]: btnStyle === 'danger' && !outline,
-        [styles.btnWarning]: btnStyle === 'warning' && !outline,
-        [styles.btnInfo]: btnStyle === 'info' && !outline,
-        [styles.btnSuccess]: btnStyle === 'success' && !outline,
-        [styles.btnLight]: btnStyle === 'light' && !outline,
-        [styles.btnDark]: btnStyle === 'dark' && !outline,
-        [styles.btnLink]: btnStyle === 'link',
-        [styles.btnOutlineDefault]: btnStyle === 'default' && outline,
-        [styles.btnOutlinePrimary]: btnStyle === 'primary' && outline,
-        [styles.btnOutlineSecondary]: btnStyle === 'secondary' && outline,
-        [styles.btnOutlineDanger]: btnStyle === 'danger' && outline,
-        [styles.btnOutlineWarning]: btnStyle === 'warning' && outline,
-        [styles.btnOutlineInfo]: btnStyle === 'info' && outline,
-        [styles.btnOutlineSuccess]: btnStyle === 'success' && outline,
-        [styles.btnOutlineLight]: btnStyle === 'light' && outline,
-        [styles.btnOutlineDark]: btnStyle === 'dark' && outline,
+        [styles.btnDefault]: variant === 'default' && !outline,
+        [styles.btnPrimary]: variant === 'primary' && !outline,
+        [styles.btnSecondary]: variant === 'secondary' && !outline,
+        [styles.btnDanger]: variant === 'danger' && !outline,
+        [styles.btnWarning]: variant === 'warning' && !outline,
+        [styles.btnInfo]: variant === 'info' && !outline,
+        [styles.btnSuccess]: variant === 'success' && !outline,
+        [styles.btnLight]: variant === 'light' && !outline,
+        [styles.btnDark]: variant === 'dark' && !outline,
+        [styles.btnLink]: variant === 'link',
+        [styles.btnOutlineDefault]: variant === 'default' && outline,
+        [styles.btnOutlinePrimary]: variant === 'primary' && outline,
+        [styles.btnOutlineSecondary]: variant === 'secondary' && outline,
+        [styles.btnOutlineDanger]: variant === 'danger' && outline,
+        [styles.btnOutlineWarning]: variant === 'warning' && outline,
+        [styles.btnOutlineInfo]: variant === 'info' && outline,
+        [styles.btnOutlineSuccess]: variant === 'success' && outline,
+        [styles.btnOutlineLight]: variant === 'light' && outline,
+        [styles.btnOutlineDark]: variant === 'dark' && outline,
         [styles.btnBlock]: block,
         [styles.hover]: hover,
         [styles.active]: active,
@@ -90,13 +112,14 @@ const Button = ({
 
     return (
         <Component
-            {...props}
+            ref={ref}
             type={type}
             className={cx(className, classes)}
             disabled={disabled}
+            {...props}
         />
     );
-};
+});
 
 Button.propTypes = {
     // Pass in a component to override default button element.
@@ -118,9 +141,6 @@ Button.propTypes = {
         'submit'
     ]),
 
-    // [deprecated] Component size variations.
-    btnSize: PropTypes.oneOf(btnSizes),
-
     // Large button.
     lg: PropTypes.bool,
 
@@ -133,8 +153,11 @@ Button.propTypes = {
     // Extra small button.
     xs: PropTypes.bool,
 
+    // Component size variations.
+    size: PropTypes.oneOf(sizes),
+
     // Component visual or contextual style variants.
-    btnStyle: PropTypes.oneOf(btnStyles),
+    variant: PropTypes.oneOf(variants),
 
     // Specifies whether to remove background image and color on a button.
     outline: PropTypes.bool,
@@ -158,7 +181,7 @@ Button.propTypes = {
 Button.defaultProps = {
     tag: 'button',
     type: 'button',
-    btnStyle: 'default',
+    variant: 'default',
     outline: false,
     block: false,
     active: false,

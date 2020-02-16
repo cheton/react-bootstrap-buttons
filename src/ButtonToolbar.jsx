@@ -5,11 +5,12 @@ import styles from './styles/index.styl';
 /**
  * @example ../examples/ButtonToolbar.md
  */
-const ButtonToolbar = ({ className, ...props }) => (
+const ButtonToolbar = React.forwardRef(({ className, ...props }, ref) => (
     <div
-        {...props}
+        ref={ref}
         className={cx(className, styles.btnToolbar)}
+        {...props}
     />
-);
+));
 
 export default ButtonToolbar;
